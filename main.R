@@ -27,7 +27,7 @@ plot(1:10,
 
 # Fitting K-Means to the dataset
 set.seed(29)
-kmeans = kmeans(x = dataset, centers = 5, iter.max =300, nstart = 10)
+kmeans = kmeans(x = dataset, centers = 6, iter.max =300, nstart = 10)
 y_kmeans = kmeans$cluster
 
 # Visualising the clusters
@@ -43,3 +43,10 @@ clusplot(dataset,
          main = paste('Clusters of customers'),
          xlab = 'Annual Income',
          ylab = 'Spending Score')
+
+# a plot without scaling
+plot(x=dataset[,1], y=dataset[,2], col=y_kmeans, pch=19, 
+     xlim=c(from=min(dataset[,1]), to=max(dataset[,1]+30)),
+     xlab="Annual Income", ylab="Spending Score")
+clusters=c("Careless", "Standard", "Sensible", "Target", "Careful")
+legend('bottomright', legend=clusters, col=1:5, pch=19, horiz=F)

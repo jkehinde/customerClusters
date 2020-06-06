@@ -1,7 +1,7 @@
 # customerClusters
 This a k-means clustering problem  that puts customers into groups based on annual income and in store points
 As the customer buy more things the they will get more points. By putting these customers into their respective clusters, the company is 
-able to target specfic groups when they want to release a new product
+able to target specific groups when they want to release a new product
 
 This code is split into the following sections
 
